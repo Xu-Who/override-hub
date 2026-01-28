@@ -4,12 +4,12 @@ proxy-groups:
     type: select
     proxies:
       - 自动选择
-      - 香港节点
       - 台湾节点
       - 狮城节点
       - 日本节点
       - 美国节点
       - 韩国节点
+      - 香港节点
       - 手动切换
       - DIRECT
   - name: 手动切换
@@ -29,11 +29,11 @@ proxy-groups:
       - 节点选择
       - 自动选择
       - 狮城节点
-      - 香港节点
       - 台湾节点
       - 日本节点
       - 美国节点
       - 韩国节点
+      - 香港节点
       - 手动切换
       - DIRECT
   - name: OpenAi
@@ -42,8 +42,24 @@ proxy-groups:
     proxies:
       - 节点选择
       - 自动选择
+      - AI-UNHK
       - 狮城节点
+      - 台湾节点
+      - 日本节点
+      - 美国节点
+      - 韩国节点
       - 香港节点
+      - 手动切换
+      - DIRECT
+  - name: AI-UNHK
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png
+    type: select
+    include-all: true
+    exclude-filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
+    proxies:
+      - 节点选择
+      - 自动选择
+      - 狮城节点
       - 台湾节点
       - 日本节点
       - 美国节点
@@ -125,11 +141,11 @@ proxy-groups:
       - DIRECT
       - 节点选择
       - 美国节点
-      - 香港节点
       - 台湾节点
       - 狮城节点
       - 日本节点
       - 韩国节点
+      - 香港节点
       - 手动切换
   - name: 微软Bing
     icon: https://testingcf.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/bing.png
@@ -295,6 +311,7 @@ proxy-groups:
       - 自动选择
       - 电报消息
       - OpenAi
+      - AI-UNHK
       - 油管视频
       - 奈飞视频
       - 巴哈姆特
@@ -366,6 +383,13 @@ rule-providers:
   SteamCN:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/SteamCN.list
     path: ./ruleset/SteamCN.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  AI-MIX:
+    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/AI.list
+    path: ./ruleset/AI.list
     behavior: classical
     interval: 86400
     format: text
@@ -540,6 +564,7 @@ rules:
   - "RULE-SET,GoogleFCM,谷歌FCM"
   - "RULE-SET,GoogleCN,全球直连"
   - "RULE-SET,SteamCN,全球直连"
+  - "RULE-SET,AI-MIX,AI-UNHK"
   - "RULE-SET,Bing,微软Bing"
   - "RULE-SET,OneDrive,微软云盘"
   - "RULE-SET,Microsoft,微软服务"
