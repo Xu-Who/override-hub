@@ -9,6 +9,7 @@ proxy-groups:
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
       - 🇰🇷 韩国节点
+      - 🌐 其他国家
       - 🚀 手动切换
       - DIRECT
   - name: 🚀 手动切换
@@ -30,6 +31,7 @@ proxy-groups:
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
       - 🇰🇷 韩国节点
+      - 🌐 其他国家
       - 🚀 手动切换
       - DIRECT
   - name: 💬 OpenAi
@@ -43,6 +45,7 @@ proxy-groups:
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
       - 🇰🇷 韩国节点
+      - 🌐 其他国家
       - 🚀 手动切换
       - DIRECT
   - name: 📹 油管视频
@@ -56,6 +59,7 @@ proxy-groups:
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
       - 🇰🇷 韩国节点
+      - 🌐 其他国家
       - 🚀 手动切换
       - DIRECT
   - name: 🎥 奈飞视频
@@ -70,13 +74,7 @@ proxy-groups:
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
       - 🇰🇷 韩国节点
-      - 🚀 手动切换
-      - DIRECT
-  - name: 📺 巴哈姆特
-    type: select
-    proxies:
-      - 🇨🇳 台湾节点
-      - 🚀 节点选择
+      - 🌐 其他国家
       - 🚀 手动切换
       - DIRECT
   - name: 📺 哔哩哔哩
@@ -96,6 +94,7 @@ proxy-groups:
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
       - 🇰🇷 韩国节点
+      - 🌐 其他国家
       - 🚀 手动切换
       - DIRECT
   - name: 🌏 国内媒体
@@ -106,6 +105,7 @@ proxy-groups:
       - 🇨🇳 台湾节点
       - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
+      - 🌐 其他国家
       - 🚀 手动切换
   - name: 📢 谷歌FCM
     type: select
@@ -118,6 +118,7 @@ proxy-groups:
       - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
       - 🇰🇷 韩国节点
+      - 🌐 其他国家
       - 🚀 手动切换
   - name: Ⓜ️ 微软Bing
     type: select
@@ -130,6 +131,7 @@ proxy-groups:
       - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
       - 🇰🇷 韩国节点
+      - 🌐 其他国家
       - 🚀 手动切换
   - name: Ⓜ️ 微软云盘
     type: select
@@ -142,6 +144,7 @@ proxy-groups:
       - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
       - 🇰🇷 韩国节点
+      - 🌐 其他国家
       - 🚀 手动切换
   - name: Ⓜ️ 微软服务
     type: select
@@ -154,6 +157,7 @@ proxy-groups:
       - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
       - 🇰🇷 韩国节点
+      - 🌐 其他国家
       - 🚀 手动切换
   - name: 🍎 苹果服务
     type: select
@@ -166,6 +170,7 @@ proxy-groups:
       - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
       - 🇰🇷 韩国节点
+      - 🌐 其他国家
       - 🚀 手动切换
   - name: 🎮 游戏平台
     type: select
@@ -178,6 +183,7 @@ proxy-groups:
       - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
       - 🇰🇷 韩国节点
+      - 🌐 其他国家
       - 🚀 手动切换
   - name: 🎶 网易音乐
     type: select
@@ -215,6 +221,7 @@ proxy-groups:
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
       - 🇰🇷 韩国节点
+      - 🌐 其他国家
       - 🚀 手动切换
   - name: 🇭🇰 香港节点
     include-all: true
@@ -252,6 +259,10 @@ proxy-groups:
     type: url-test
     interval: 300
     tolerance: 50
+  - name: 🌐 其他国家
+    include-all: true
+    filter: (?i)英|UK|伦敦|德|DE|法兰克福|法|FR|巴黎|加|CA|多伦多|温哥华|澳|AU|悉尼|墨尔本|荷|NL|阿姆斯特丹|印|IN|印度|俄|RU|莫斯科|泰|TH|越南|VN|马来|MY|吉隆坡|菲|PH|印尼|ID|土|TR|土耳其|巴|BR|巴西|墨|MX|墨西哥|London|Germany|France|Canada|Australia|Netherlands|Russia|Thailand|Vietnam|Malaysia|Philippines|Indonesia|Turkey|Brazil|Mexico
+    type: select
   - name: 🎥 奈飞节点
     include-all: true
     filter: (?i)NF|奈飞|解锁|Netflix|NETFLIX|Media
@@ -335,6 +346,13 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  Wechat:
+    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Wechat.list
+    path: ./ruleset/Wechat.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
   Telegram:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Telegram.list
     path: ./ruleset/Telegram.list
@@ -401,13 +419,6 @@ rule-providers:
   Netflix:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Netflix.list
     path: ./ruleset/Netflix.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  Bahamut:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Bahamut.list
-    path: ./ruleset/Bahamut.list
     behavior: classical
     interval: 86400
     format: text
@@ -481,6 +492,7 @@ rules:
   - "RULE-SET,OneDrive,Ⓜ️ 微软云盘"
   - "RULE-SET,Microsoft,Ⓜ️ 微软服务"
   - "RULE-SET,Apple,🍎 苹果服务"
+  - "RULE-SET,Wechat,DIRECT"
   - "RULE-SET,Telegram,📲 电报消息"
   - "RULE-SET,OpenAi,💬 OpenAi"
   - "RULE-SET,NetEaseMusic,🎶 网易音乐"
@@ -491,7 +503,6 @@ rules:
   - "RULE-SET,Nintendo,🎮 游戏平台"
   - "RULE-SET,YouTube,📹 油管视频"
   - "RULE-SET,Netflix,🎥 奈飞视频"
-  - "RULE-SET,Bahamut,📺 巴哈姆特"
   - "RULE-SET,BilibiliHMT,📺 哔哩哔哩"
   - "RULE-SET,Bilibili,📺 哔哩哔哩"
   - "RULE-SET,ChinaMedia,🌏 国内媒体"
