@@ -14,7 +14,6 @@ proxy-groups:
       - DIRECT
   - name: 🚀 手动切换
     include-all: true
-    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|剩余|套餐|官网|\*[3-9]\.[1-9]\d*$|\*[4-9](?:\.\d+)?$|\*[1-9]\d+(?:\.\d+)?$
     type: select
   - name: ♻️ 自动选择
     type: url-test
@@ -50,20 +49,6 @@ proxy-groups:
       - 🌐 其他国家
       - 🚀 手动切换
       - DIRECT
-  - name: 📹 油管视频
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - ♻️ 自动选择
-      - 🇸🇬 狮城节点
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇯🇵 日本节点
-      - 🇺🇸 美国节点
-      - 🇰🇷 韩国节点
-      - 🌐 其他国家
-      - 🚀 手动切换
-      - DIRECT
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -79,6 +64,7 @@ proxy-groups:
       - 🚀 手动切换
       - DIRECT
   - name: 📢 谷歌FCM
+    hidden: true
     type: select
     proxies:
       - DIRECT
@@ -92,6 +78,7 @@ proxy-groups:
       - 🌐 其他国家
       - 🚀 手动切换
   - name: 🍎 苹果服务
+    hidden: true
     type: select
     proxies:
       - DIRECT
@@ -105,17 +92,20 @@ proxy-groups:
       - 🌐 其他国家
       - 🚀 手动切换
   - name: 🎯 全球直连
+    hidden: true
     type: select
     proxies:
       - DIRECT
       - 🚀 节点选择
       - ♻️ 自动选择
   - name: 🛑 广告拦截
+    hidden: true
     type: select
     proxies:
       - REJECT
       - DIRECT
   - name: 🍃 应用净化
+    hidden: true
     type: select
     proxies:
       - REJECT
@@ -266,13 +256,6 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  YouTube:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/YouTube.list
-    path: ./ruleset/YouTube.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
   ProxyMedia:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ProxyMedia.list
     path: ./ruleset/ProxyMedia.list
@@ -321,7 +304,6 @@ rules:
   - "RULE-SET,Wechat,DIRECT"
   - "RULE-SET,Telegram,📲 电报消息"
   - "RULE-SET,AI,🤖 AI"
-  - "RULE-SET,YouTube,📹 油管视频"
   - "RULE-SET,ProxyMedia,🌍 国外媒体"
   - "RULE-SET,ProxyGFWlist,🚀 节点选择"
   - "RULE-SET,ChinaDomain,🎯 全球直连"
