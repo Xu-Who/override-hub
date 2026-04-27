@@ -7,17 +7,19 @@ proxy-groups:
       - 🇨🇳 台湾节点
       - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
-      - 🇺🇲 美国节点
+      - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - 🌐 其他国家
       - 🚀 手动切换
       - DIRECT
   - name: 🚀 手动切换
     include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|剩余|套餐|官网|\*[3-9]\.[1-9]\d*$|\*[4-9](?:\.\d+)?$|\*[1-9]\d+(?:\.\d+)?$
     type: select
   - name: ♻️ 自动选择
     type: url-test
     include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|剩余|套餐|官网|\*[3-9]\.[1-9]\d*$|\*[4-9](?:\.\d+)?$|\*[1-9]\d+(?:\.\d+)?$
     interval: 300
     tolerance: 50
   - name: 📲 电报消息
@@ -29,7 +31,7 @@ proxy-groups:
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
-      - 🇺🇲 美国节点
+      - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - 🌐 其他国家
       - 🚀 手动切换
@@ -43,7 +45,7 @@ proxy-groups:
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
-      - 🇺🇲 美国节点
+      - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - 🌐 其他国家
       - 🚀 手动切换
@@ -57,7 +59,7 @@ proxy-groups:
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
-      - 🇺🇲 美国节点
+      - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - 🌐 其他国家
       - 🚀 手动切换
@@ -71,7 +73,7 @@ proxy-groups:
       - 🇨🇳 台湾节点
       - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
-      - 🇺🇲 美国节点
+      - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - 🌐 其他国家
       - 🚀 手动切换
@@ -81,7 +83,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - 🚀 节点选择
-      - 🇺🇲 美国节点
+      - 🇺🇸 美国节点
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇸🇬 狮城节点
@@ -94,7 +96,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - 🚀 节点选择
-      - 🇺🇲 美国节点
+      - 🇺🇸 美国节点
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇸🇬 狮城节点
@@ -128,49 +130,63 @@ proxy-groups:
       - 🇨🇳 台湾节点
       - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
-      - 🇺🇲 美国节点
+      - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - 🌐 其他国家
       - 🚀 手动切换
   - name: 🇭🇰 香港节点
+    hidden: true
     include-all: true
     filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|剩余|套餐|官网|\*[3-9]\.[1-9]\d*$|\*[4-9](?:\.\d+)?$|\*[1-9]\d+(?:\.\d+)?$
     type: url-test
     interval: 300
     tolerance: 50
   - name: 🇯🇵 日本节点
+    hidden: true
     include-all: true
     filter: (?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|剩余|套餐|官网|\*[3-9]\.[1-9]\d*$|\*[4-9](?:\.\d+)?$|\*[1-9]\d+(?:\.\d+)?$
     type: url-test
     interval: 300
     tolerance: 50
-  - name: 🇺🇲 美国节点
+  - name: 🇺🇸 美国节点
+    hidden: true
     include-all: true
     filter: (?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|剩余|套餐|官网|\*[3-9]\.[1-9]\d*$|\*[4-9](?:\.\d+)?$|\*[1-9]\d+(?:\.\d+)?$
     type: url-test
     interval: 300
     tolerance: 50
   - name: 🇨🇳 台湾节点
+    hidden: true
     include-all: true
     filter: (?i)台|新北|彰化|TW|Taiwan
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|剩余|套餐|官网|\*[3-9]\.[1-9]\d*$|\*[4-9](?:\.\d+)?$|\*[1-9]\d+(?:\.\d+)?$
     type: url-test
     interval: 300
     tolerance: 50
   - name: 🇸🇬 狮城节点
+    hidden: true
     include-all: true
     filter: (?i)新加坡|坡|狮城|SG|Singapore
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|剩余|套餐|官网|\*[3-9]\.[1-9]\d*$|\*[4-9](?:\.\d+)?$|\*[1-9]\d+(?:\.\d+)?$
     type: url-test
     interval: 300
     tolerance: 50
   - name: 🇰🇷 韩国节点
+    hidden: true
     include-all: true
     filter: (?i)KR|Korea|KOR|首尔|韩|韓
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|剩余|套餐|官网|\*[3-9]\.[1-9]\d*$|\*[4-9](?:\.\d+)?$|\*[1-9]\d+(?:\.\d+)?$
     type: url-test
     interval: 300
     tolerance: 50
   - name: 🌐 其他国家
+    hidden: true
     include-all: true
     filter: (?i)英|UK|伦敦|德|DE|法兰克福|法|FR|巴黎|加|CA|多伦多|温哥华|澳|AU|悉尼|墨尔本|荷|NL|阿姆斯特丹|印|IN|印度|俄|RU|莫斯科|泰|TH|越南|VN|马来|MY|吉隆坡|菲|PH|印尼|ID|土|TR|土耳其|巴|BR|巴西|墨|MX|墨西哥|London|Germany|France|Canada|Australia|Netherlands|Russia|Thailand|Vietnam|Malaysia|Philippines|Indonesia|Turkey|Brazil|Mexico
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|剩余|套餐|官网|\*[3-9]\.[1-9]\d*$|\*[4-9](?:\.\d+)?$|\*[1-9]\d+(?:\.\d+)?$
     type: select
 rule-providers:
   LocalAreaNetwork:
@@ -274,14 +290,14 @@ rule-providers:
   ChinaDomain:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ChinaDomain.list
     path: ./ruleset/ChinaDomain.list
-    behavior: domain
+    behavior: classical
     interval: 86400
     format: text
     type: http
   ChinaCompanyIp:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ChinaCompanyIp.list
     path: ./ruleset/ChinaCompanyIp.list
-    behavior: ipcidr
+    behavior: classical
     interval: 86400
     format: text
     type: http
