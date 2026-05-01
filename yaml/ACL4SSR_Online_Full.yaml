@@ -221,13 +221,6 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  SteamCN:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/SteamCN.list
-    path: ./ruleset/SteamCN.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
   Steam:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Steam.list
     path: ./ruleset/Steam.list
@@ -306,7 +299,6 @@ rules:
   - "RULE-SET,BanProgramAD,🍃 应用净化"
   - "RULE-SET,GoogleFCM,📢 谷歌FCM"
   - "RULE-SET,GoogleCN,🎯 全球直连"
-  - "RULE-SET,SteamCN,🎯 全球直连"
   - "RULE-SET,Steam,🚀 节点选择"
   - "RULE-SET,Apple,🍎 苹果服务"
   - "RULE-SET,Wechat,DIRECT"
